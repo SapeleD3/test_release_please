@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/SapeleD3/test_release_please/compare/staging-v1.1.0...staging-v1.1.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* major bump for prod ([e519c1d](https://github.com/SapeleD3/test_release_please/commit/e519c1dd1bde455b1269ce8784e386736747a400))
+
 ## [1.1.0](https://github.com/SapeleD3/test_release_please/compare/staging-v1.0.0...staging-v1.1.0) (2024-08-06)
 
 
