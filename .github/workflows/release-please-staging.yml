@@ -32,4 +32,19 @@ jobs:
       run: |
         echo "Release outputs:"
         echo "${{ toJson(steps.release.outputs) }}"
+    - name: Extract Outputs
+      id: extract_outputs
+      run: |
+        tag_name="${{ steps.release.outputs.tag_name }}"
+        releases_created="${{ steps.release.outputs.releases_created }}"
+        version="${{ steps.release.outputs.version }}"
+
+        echo "Tag Name: $tag_name"
+        echo "Releases Created: $releases_created"
+        echo "Version: $version"
+
+        # Set outputs for further steps
+        echo "::set-output name=tag_name::$tag_name"
+        echo "::set-output name=releases_created::$releases_created"
+        echo "::set-output name=version::$version"
 
