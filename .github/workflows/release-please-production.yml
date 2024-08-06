@@ -1,4 +1,4 @@
-name: Release please staging
+name: Release please production
 
 on:
   push:
