@@ -6,6 +6,14 @@
 ### Bug Fixes
 
 * set production to create own changelog ([5955cbc](https://github.com/SapeleD3/test_release_please/commit/5955cbcd5cd9148862a1ea8a248a783d09d69b07))
+* update production ([#14](https://github.com/SapeleD3/test_release_please/issues/14)) ([7348178](https://github.com/SapeleD3/test_release_please/commit/734817836b7f623e2a4d9288503ccc7ea2f066a7))
+
+## [1.1.1](https://github.com/SapeleD3/test_release_please/compare/staging-v1.1.0...staging-v1.1.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* set production to create own changelog ([5955cbc](https://github.com/SapeleD3/test_release_please/commit/5955cbcd5cd9148862a1ea8a248a783d09d69b07))
 
 ## [1.1.0](https://github.com/SapeleD3/test_release_please/compare/staging-v1.0.0...staging-v1.1.0) (2024-08-06)
 
