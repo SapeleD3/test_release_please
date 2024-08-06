@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.1.0](https://github.com/SapeleD3/test_release_please/compare/staging-v1.0.0...staging-v1.1.0) (2024-08-06)
+
+
+### Features
+
+* staging release ([3fefdd9](https://github.com/SapeleD3/test_release_please/commit/3fefdd9127f538758730bee7f752519f6abad4ff))
+
+
+### Bug Fixes
+
+* incorrect spelling of secret name ([1854e30](https://github.com/SapeleD3/test_release_please/commit/1854e307f8c8bbb5f3a94568358b1aef99e110ef))
+* keep configs in root path ([2edf41a](https://github.com/SapeleD3/test_release_please/commit/2edf41aeec6c9afdd236d71eb03c3de399297653))
+* major bump ([9388e90](https://github.com/SapeleD3/test_release_please/commit/9388e90fe54e7d261bd4d291ae89d927b4f426d5))
+* try in a different path ([2541507](https://github.com/SapeleD3/test_release_please/commit/2541507810ca4e031232628bf9a3e79c1c44ebb8))
+* update manifest path ([6ad771a](https://github.com/SapeleD3/test_release_please/commit/6ad771a90ed9fb1c6c635d346e5b916d931974e9))
+* update prod ([a8d4a44](https://github.com/SapeleD3/test_release_please/commit/a8d4a44f18eda7b7555fca2a2babb424a9362c16))
+* update read me ([290a45d](https://github.com/SapeleD3/test_release_please/commit/290a45d590ad5bc08f5d1f29137293d92dac675f))
+* use default naming convention ([03aa469](https://github.com/SapeleD3/test_release_please/commit/03aa469edb6f018cccc4da0657596d388629f0ee))
+
 ## 0.1.0 (2024-08-06)
 
 
