@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.3...staging-v1.2.4) (2024-08-06)
+
+
+### Bug Fixes
+
+* use default commit message ([2f79e9b](https://github.com/SapeleD3/test_release_please/commit/2f79e9bef5d7f3c0f76f9203524b19aaa5fd0a0b))
+
 ## [1.2.3](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.2...staging-v1.2.3) (2024-08-06)
 
 
