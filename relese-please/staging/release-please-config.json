@@ -5,7 +5,8 @@
       "package-name": "staging",
       "release-type": "python",
       "draft": false,
-      "prerelease": false
+      "prerelease": false,
+      "changelog-path": "relese-please/staging/CHANGELOG.md"
     }
   }
 }
