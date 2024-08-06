@@ -1,9 +1,9 @@
-name: Release please staging
+name: Release please production
 
 on:
   push:
     branches:
-      - main
+      - production
 
 permissions:
   contents: write
@@ -20,6 +20,6 @@ jobs:
           # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
           token: ${{ secrets.GITHUB_TOKEN }}
           # optional. customize path to release-please-config.json
-          config-file: relese-please/staging/release-please-config.json
+          config-file: relese-please/prod/release-please-config.json
           # optional. customize path to .release-please-manifest.json
-          manifest-file: relese-please/staging/.release-please-manifest.json
+          manifest-file: relese-please/prod/.release-please-manifest.json

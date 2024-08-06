@@ -1,0 +1,11 @@
+{
+  "include-component-in-tag": true,
+  "packages": {
+    ".": {
+      "package-name": "staging",
+      "release-type": "python",
+      "draft": false,
+      "prerelease": false
+    }
+  }
+}
