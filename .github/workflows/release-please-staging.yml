@@ -44,7 +44,11 @@ jobs:
         echo "Version: $version"
 
         # Set outputs for further steps
-        echo "::set-output name=tag_name::$tag_name"
-        echo "::set-output name=releases_created::$releases_created"
-        echo "::set-output name=version::$version"
+        echo "tag_name=$tag_name" >> $GITHUB_ENV
+        echo "releases_created=$releases_created" >> $GITHUB_ENV
+        echo "version=$version" >> $GITHUB_ENV
+    - name: Log Tag Name if Release Created
+      run: |
+        echo "Release created with tag: ${{ steps.release.outputs.tag_name }} -  ENV: ${{ env.version }}"
+
 
