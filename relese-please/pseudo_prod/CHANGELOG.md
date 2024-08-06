@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/SapeleD3/test_release_please/compare/pseudo-v1.2.0...pseudo-v1.2.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* modify REAME.md ([#25](https://github.com/SapeleD3/test_release_please/issues/25)) ([57f60c2](https://github.com/SapeleD3/test_release_please/commit/57f60c2dc84ada89063de43919b541bb25dbc65b))
+
 ## [1.2.0](https://github.com/SapeleD3/test_release_please/compare/pseudo-v1.1.0...pseudo-v1.2.0) (2024-08-06)
 
 
