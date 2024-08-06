@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.1...staging-v1.2.2) (2024-08-06)
+
+
+### Bug Fixes
+
+* modify README.md ([82f2ad2](https://github.com/SapeleD3/test_release_please/commit/82f2ad206097555386c46d83932541f5672f24c6))
+
 ## [1.2.1](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.0...staging-v1.2.1) (2024-08-06)
 
 
