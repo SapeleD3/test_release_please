@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/SapeleD3/test_release_please/compare/v0.2.2...v0.2.3) (2024-08-06)
+
+
+### Bug Fixes
+
+* use default naming convention ([03aa469](https://github.com/SapeleD3/test_release_please/commit/03aa469edb6f018cccc4da0657596d388629f0ee))
+
 ## [0.2.2](https://github.com/SapeleD3/test_release_please/compare/v0.2.1...v0.2.2) (2024-08-06)
 
 
