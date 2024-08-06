@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.2...staging-v1.2.3) (2024-08-06)
+
+
+### Bug Fixes
+
+* deploy package ([4d10471](https://github.com/SapeleD3/test_release_please/commit/4d1047182b00f04b57c6da2a55686ede203c73b2))
+
 ## [1.2.2](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.1...staging-v1.2.2) (2024-08-06)
 
 
