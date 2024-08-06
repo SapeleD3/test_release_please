@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/SapeleD3/test_release_please/compare/v0.2.1...v0.2.2) (2024-08-06)
+
+
+### Bug Fixes
+
+* update read me ([290a45d](https://github.com/SapeleD3/test_release_please/commit/290a45d590ad5bc08f5d1f29137293d92dac675f))
+
 ## [0.2.1](https://github.com/SapeleD3/test_release_please/compare/v0.2.0...v0.2.1) (2024-08-06)
 
 
