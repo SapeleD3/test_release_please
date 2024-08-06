@@ -1,0 +1,10 @@
+{
+  "include-component-in-tag": true,
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "draft": false,
+      "prerelease": false
+    }
+  }
+}

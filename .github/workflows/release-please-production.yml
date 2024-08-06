@@ -3,7 +3,7 @@ name: Release please staging
 on:
   push:
     branches:
-      - main
+      - production
 
 permissions:
   contents: write
@@ -23,6 +23,6 @@ jobs:
           # for more options
           release-type: python
           # optional. customize path to release-please-config.json
-          config-file: relese-please/staging/release-please-staging-config.json
+          config-file: relese-please/prod/release-please-prod-config.json
           # optional. customize path to .release-please-manifest.json
-          manifest-file: relese-please/staging/.release-please-staging-manifest.json
+          manifest-file: relese-please/prod/.release-please-prod-manifest.json
