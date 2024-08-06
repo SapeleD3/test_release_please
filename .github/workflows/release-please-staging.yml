@@ -23,6 +23,6 @@ jobs:
           # for more options
           release-type: python
           # optional. customize path to release-please-config.json
-          config-file: ./relese-please/staging/release-please-staging-config.json
+          config-file: release-please-staging-config.json
           # optional. customize path to .release-please-manifest.json
-          manifest-file: ./relese-please/staging/.release-please-staging-manifest.json
+          manifest-file: .release-please-staging-manifest.json
