@@ -1,3 +1,3 @@
 ## NOTES
 
-updating the name
+Testing releases
