@@ -5,7 +5,8 @@
       "release-type": "python",
       "draft": false,
       "prerelease": false,
-      "changelog-path": "relese-please/staging/CHANGELOG.md"
+      "changelog-path": "relese-please/staging/CHANGELOG.md",
+      "pull-request-title-pattern": "new release: ${component} v${version} on branch ${branch?}"
     }
   }
 }
