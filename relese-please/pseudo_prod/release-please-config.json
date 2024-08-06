@@ -1,0 +1,13 @@
+{
+  "include-component-in-tag": true,
+  "packages": {
+    ".": {
+      "package-name": "pseudo",
+      "release-type": "python",
+      "draft": false,
+      "prerelease": false,
+      "changelog-path": "relese-please/pseudo_prod/CHANGELOG.md",
+      "pull-request-title-pattern": "new release${scope}: ${component} v${version}"
+    }
+  }
+}

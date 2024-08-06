@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.1](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.0...staging-v1.2.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* add pseudo package name ([fe44fab](https://github.com/SapeleD3/test_release_please/commit/fe44fab7c854ae79890ad1e43df9d65d3f9149e0))
+
+## [1.2.0](https://github.com/SapeleD3/test_release_please/compare/staging-v1.1.1...staging-v1.2.0) (2024-08-06)
+
+
+### Features
+
+* add pseudo prod environment ([b41b519](https://github.com/SapeleD3/test_release_please/commit/b41b5197dbab43bf66359b04182f550e5cb5847b))
+
 ## [1.1.1](https://github.com/SapeleD3/test_release_please/compare/staging-v1.1.0...staging-v1.1.1) (2024-08-06)
 
 
