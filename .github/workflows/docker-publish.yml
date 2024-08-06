@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-push:
-    if: "${{ contains(github.event.head_commit.message, 'new release(main): staging v') }}"
+    if: "${{ contains(github.event.head_commit.message, 'chore(main): release') }}"
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,7 @@ jobs:
       id: vars
       run: |
         commit_message="${{ github.event.head_commit.message }}"
-        if [[ $commit_message =~ v([0-9]+\.[0-9]+\.[0-9]+) ]]; then
+        if [[ $commit_message =~ release\ ([0-9]+\.[0-9]+\.[0-9]+) ]]; then
           version="${BASH_REMATCH[1]}"
           echo "version=$version" >> $GITHUB_ENV
           echo "VERSION=$version"
