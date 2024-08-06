@@ -41,5 +41,5 @@ jobs:
         context: .
         push: true
         tags: |
-          sapeled3/sap-cc:staging-${{ env.version }}
-          sapeled3/sap-cc:latest
+          sapeled3/nj-releaseplease:staging-${{ env.version }}
+          sapeled3/nj-releaseplease:latest
