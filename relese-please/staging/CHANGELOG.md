@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.5...staging-v1.3.0) (2024-08-06)
+
+
+### Features
+
+* add docker file ([213e7eb](https://github.com/SapeleD3/test_release_please/commit/213e7ebb92b2f63cc48f4c696b0305f647f26c50))
+
 ## [1.2.5](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.4...staging-v1.2.5) (2024-08-06)
 
 
