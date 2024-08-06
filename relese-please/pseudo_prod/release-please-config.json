@@ -1,7 +1,8 @@
 {
-  "include-component-in-tag": false,
+  "include-component-in-tag": true,
   "packages": {
     ".": {
+      "package-name": "pseudo",
       "release-type": "python",
       "draft": false,
       "prerelease": false,
