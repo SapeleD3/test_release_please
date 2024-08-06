@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.5](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.4...staging-v1.2.5) (2024-08-06)
+
+
+### Bug Fixes
+
+* expecting scope in commit message ([079c36b](https://github.com/SapeleD3/test_release_please/commit/079c36b27953f33aac2794c5a20ea6999b9b7d73))
+
 ## [1.2.4](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.3...staging-v1.2.4) (2024-08-06)
 
 
