@@ -16,6 +16,7 @@ jobs:
       nj-releaseplease--tag_name: ${{ steps.release.outputs. nj-releaseplease--tag_name}}
     steps:
     - uses: googleapis/release-please-action@v4
+      id: release
       with:
         target-branch: main
         # this assumes that you have created a personal access token
