@@ -27,11 +27,6 @@ jobs:
         config-file: relese-please/staging/release-please-config.json
         # optional. customize path to .release-please-manifest.json
         manifest-file: relese-please/staging/.release-please-manifest.json
-    - name: Print release outputs for debugging
-      continue-on-error: true
-      run: |
-        echo "Release outputs:"
-        echo "${{ toJson(steps.release.outputs) }}"
     - name: Extract Outputs
       id: extract_outputs
       run: |
@@ -47,8 +42,29 @@ jobs:
         echo "tag_name=$tag_name" >> $GITHUB_ENV
         echo "releases_created=$releases_created" >> $GITHUB_ENV
         echo "version=$version" >> $GITHUB_ENV
-    - name: Log Tag Name if Release Created
-      run: |
-        echo "Release created with tag: ${{ steps.release.outputs.tag_name }} -  ENV: ${{ env.version }}"
 
+    - name: Checkout code
+      id: checkout_code
+      if: env.releases_created == 'true' && env.tag_name != ''
+      uses: actions/checkout@v2
 
+    - name: Set up Docker Buildx
+      if: env.releases_created == 'true' && env.tag_name != ''
+      uses: docker/setup-buildx-action@v1
+
+    - name: Log in to Docker Hub
+      if: env.releases_created == 'true' && env.tag_name != ''
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build and push Docker image
+      if: env.releases_created == 'true' && env.tag_name != ''
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: |
+          sapeled3/nj-releaseplease:${{ env.tag_name }}
+          sapeled3/nj-releaseplease:latest
