@@ -1,17 +1,11 @@
 # Changelog
 
-## [1.1.0](https://github.com/SapeleD3/test_release_please/compare/v1.0.0...v1.1.0) (2024-08-06)
-
-
-### Features
-
-* update production ([#8](https://github.com/SapeleD3/test_release_please/issues/8)) ([222ef78](https://github.com/SapeleD3/test_release_please/commit/222ef78449128044429c83e821f47eaa39400915))
+## [1.1.1](https://github.com/SapeleD3/test_release_please/compare/staging-v1.1.0...staging-v1.1.1) (2024-08-06)
 
 
 ### Bug Fixes
 
-* incorrect spelling of secret name ([1854e30](https://github.com/SapeleD3/test_release_please/commit/1854e307f8c8bbb5f3a94568358b1aef99e110ef))
-* update production ([#14](https://github.com/SapeleD3/test_release_please/issues/14)) ([7348178](https://github.com/SapeleD3/test_release_please/commit/734817836b7f623e2a4d9288503ccc7ea2f066a7))
+* set production to create own changelog ([5955cbc](https://github.com/SapeleD3/test_release_please/commit/5955cbcd5cd9148862a1ea8a248a783d09d69b07))
 
 ## [1.1.0](https://github.com/SapeleD3/test_release_please/compare/staging-v1.0.0...staging-v1.1.0) (2024-08-06)
 
