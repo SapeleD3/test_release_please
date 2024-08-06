@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.1](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.0...staging-v1.3.1) (2024-08-06)
+
+
+### Bug Fixes
+
+* id the steps ([22c874f](https://github.com/SapeleD3/test_release_please/commit/22c874f96510509a670e3fb5265370882530829a))
+* remove space from output name ([c0aa762](https://github.com/SapeleD3/test_release_please/commit/c0aa7627281019f31d16f0d935122342248d620a))
+* use steps output ([38b8bdc](https://github.com/SapeleD3/test_release_please/commit/38b8bdc4e42bfadc1b78461abd323351d8cee3e9))
+
 ## [1.3.0](https://github.com/SapeleD3/test_release_please/compare/staging-v1.2.5...staging-v1.3.0) (2024-08-06)
 
 
