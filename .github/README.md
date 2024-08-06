@@ -1,3 +1,3 @@
 ## NOTES
 
-Testing releases
+Update Readme for pseudo changes
