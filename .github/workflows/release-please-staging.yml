@@ -13,7 +13,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:
-      nj-releaseplease--tag_name: ${{ steps.release.outputs. nj-releaseplease--tag_name}}
+      nj--tag_name: ${{ steps.release.outputs.nj--tag_name}}
     steps:
     - uses: googleapis/release-please-action@v4
       id: release
