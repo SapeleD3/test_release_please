@@ -19,10 +19,7 @@ jobs:
           # (PAT) and configured it as a GitHub action secret named
           # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
           token: ${{ secrets.GITHUB_TOKEN }}
-          # this is a built-in strategy in release-please, see "Action Inputs"
-          # for more options
-          release-type: python
           # optional. customize path to release-please-config.json
-          config-file: release-please-staging-config.json
+          config-file: relese-please/staging/release-please-config.json
           # optional. customize path to .release-please-manifest.json
-          manifest-file: .release-please-staging-manifest.json
+          manifest-file: relese-please/staging/.release-please-manifest.json
