@@ -81,10 +81,10 @@ jobs:
         run: |
           sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SERVER_IP }} << EOF
             cd /home/staging/test
-            docker pull sapeled3/nj-releaseplease:${{env.tag_name}}
+            docker pull sapeled3/nj-releaseplease:${{needs.release-please.outputs.tag_name}}
             docker stop nj-releaseplease || true
             docker rm nj-releaseplease || true
             touch .env
             echo ENV_FILE="$ENV_FILE" > .env
-            docker run --env-file .env -d -p 8080:8000 --name nj-releaseplease sapeled3/nj-releaseplease:${{env.tag_name}} 
+            docker run --env-file .env -d -p 8080:8000 --name nj-releaseplease sapeled3/nj-releaseplease:${{needs.release-please.outputs.tag_name}} 
           EOF
