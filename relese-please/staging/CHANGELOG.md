@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.7](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.6...staging-v1.3.7) (2024-08-07)
+
+
+### Bug Fixes
+
+* install latest ([e472fac](https://github.com/SapeleD3/test_release_please/commit/e472fac7f6cebce3df40b935322dc82a5438ad97))
+
 ## [1.3.6](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.5...staging-v1.3.6) (2024-08-07)
 
 
