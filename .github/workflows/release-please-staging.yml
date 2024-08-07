@@ -31,12 +31,10 @@ jobs:
           tag_name="${{ steps.release.outputs.tag_name }}"
           releases_created="${{ steps.release.outputs.releases_created }}"
           version="${{ steps.release.outputs.version }}"
-          secrets="$ENV_FILE"
 
           echo "Tag Name: $tag_name"
           echo "Releases Created: $releases_created"
           echo "Version: $version"
-          echo "Secrets: $secrets"
 
           # Set outputs for further steps
           echo "tag_name=$tag_name" >> $GITHUB_ENV
@@ -84,6 +82,6 @@ jobs:
             docker stop nj-releaseplease || true
             docker rm nj-releaseplease || true
             touch .env
-            echo ENV_FILE="$ENV_FILE" >> .env
-            cat .env
-            docker run --env-file .env -d -p 8080:8000 --name nj-releaseplease sapeled3/nj-releaseplease:latest EOF
+            echo ENV_FILE="$ENV_FILE" > .env
+            docker run --env-file .env -d -p 8080:8000 --name nj-releaseplease sapeled3/nj-releaseplease:latest 
+          EOF
