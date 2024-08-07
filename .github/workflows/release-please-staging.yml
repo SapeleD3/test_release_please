@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  ENV_FILE: ${{ secrets.ENV_FILE }}
+
 permissions:
   contents: write
   pull-requests: write
@@ -28,7 +31,7 @@ jobs:
           tag_name="${{ steps.release.outputs.tag_name }}"
           releases_created="${{ steps.release.outputs.releases_created }}"
           version="${{ steps.release.outputs.version }}"
-          secrets="${{ secrets.ENV_FILE }}"
+          secrets="$ENV_FILE"
 
           echo "Tag Name: $tag_name"
           echo "Releases Created: $releases_created"
@@ -80,6 +83,7 @@ jobs:
             docker pull sapeled3/nj-releaseplease
             docker stop nj-releaseplease || true
             docker rm nj-releaseplease || true
-            echo ENV_FILE="$${{ secrets.ENV_FILE }}" >> .env
+            touch .env
+            echo ENV_FILE="$ENV_FILE" >> .env
             cat .env
-            docker run --env-file ./env -d -p 8080:8000 --name nj-releaseplease sapeled3/nj-releaseplease:latest EOF
+            docker run --env-file .env -d -p 8080:8000 --name nj-releaseplease sapeled3/nj-releaseplease:latest EOF
