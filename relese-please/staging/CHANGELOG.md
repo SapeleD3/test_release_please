@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.5](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.4...staging-v1.3.5) (2024-08-07)
+
+
+### Bug Fixes
+
+* append change to env ([b931901](https://github.com/SapeleD3/test_release_please/commit/b9319016f4c82a99adc6df748015a8f8fa046d18))
+* fix deploy script ([7d1a36c](https://github.com/SapeleD3/test_release_please/commit/7d1a36cc574b37a0327d1281765b3b2fa50e7fd6))
+* log env ([ab0837c](https://github.com/SapeleD3/test_release_please/commit/ab0837c38e21257131ccdb1f625d62dcdfa27f0b))
+* ssh into ([288af68](https://github.com/SapeleD3/test_release_please/commit/288af681cfc049086585a9e7cd3f1be0d0c380f4))
+* use env ([d2fea5a](https://github.com/SapeleD3/test_release_please/commit/d2fea5ac70ba2b59d272f92b59c443b7ff061ac3))
+* use latest release tag name ([af22a90](https://github.com/SapeleD3/test_release_please/commit/af22a905d3219cc71697455b8ff775842420cd00))
+
 ## [1.3.4](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.3...staging-v1.3.4) (2024-08-07)
 
 
