@@ -75,7 +75,8 @@ jobs:
 
       - name: Deploy to dev server
         run: |
-          cd /home/staging/test && sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SERVER_IP }} << EOF
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SERVER_IP }} << EOF
+            cd /home/staging/test
             docker pull sapeled3/nj-releaseplease
             docker stop nj-releaseplease || true
             docker rm nj-releaseplease || true
