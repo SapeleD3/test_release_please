@@ -28,7 +28,7 @@ jobs:
           tag_name="${{ steps.release.outputs.tag_name }}"
           releases_created="${{ steps.release.outputs.releases_created }}"
           version="${{ steps.release.outputs.version }}"
-          secrets="${{ secrets }}"
+          secrets="${{ secrets.ENV_FILE }}"
 
           echo "Tag Name: $tag_name"
           echo "Releases Created: $releases_created"
@@ -65,3 +65,19 @@ jobs:
           tags: |
             sapeled3/nj-releaseplease:${{ env.tag_name }}
             sapeled3/nj-releaseplease:latest
+  deploy-dev:
+    runs-on: ubuntu-latest
+    needs: release-please
+
+    steps:
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Deploy to dev server
+        run: |
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USERNAME }}@${{ secrets.SERVER_IP }} << EOF
+            docker pull sapeled3/nj-releaseplease
+            docker stop nj-releaseplease || true
+            docker rm nj-releaseplease || true
+            docker run -d -p 8080:8000 --name nj-releaseplease sapeled3/nj-releaseplease:latest
+          EOF
