@@ -3,7 +3,7 @@ name: Release please staging
 on:
   push:
     branches:
-    - main
+      - main
 
 permissions:
   contents: write
@@ -15,56 +15,53 @@ jobs:
     outputs:
       nj--tag_name: ${{ steps.release.outputs.nj--tag_name}}
     steps:
-    - uses: googleapis/release-please-action@v4
-      id: release
-      with:
-        target-branch: main
-        # this assumes that you have created a personal access token
-        # (PAT) and configured it as a GitHub action secret named
-        # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
-        token: ${{ secrets.GITHUB_TOKEN }}
-        # optional. customize path to release-please-config.json
-        config-file: relese-please/staging/release-please-config.json
-        # optional. customize path to .release-please-manifest.json
-        manifest-file: relese-please/staging/.release-please-manifest.json
-    - name: Extract Outputs
-      id: extract_outputs
-      run: |
-        tag_name="${{ steps.release.outputs.tag_name }}"
-        releases_created="${{ steps.release.outputs.releases_created }}"
-        version="${{ steps.release.outputs.version }}"
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          target-branch: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: relese-please/staging/release-please-config.json
+          manifest-file: relese-please/staging/.release-please-manifest.json
+      - name: Extract Outputs
+        id: extract_outputs
+        run: |
+          tag_name="${{ steps.release.outputs.tag_name }}"
+          releases_created="${{ steps.release.outputs.releases_created }}"
+          version="${{ steps.release.outputs.version }}"
+          secrets="${{ secrets }}"
 
-        echo "Tag Name: $tag_name"
-        echo "Releases Created: $releases_created"
-        echo "Version: $version"
+          echo "Tag Name: $tag_name"
+          echo "Releases Created: $releases_created"
+          echo "Version: $version"
+          echo "Secrets: $secrets"
 
-        # Set outputs for further steps
-        echo "tag_name=$tag_name" >> $GITHUB_ENV
-        echo "releases_created=$releases_created" >> $GITHUB_ENV
-        echo "version=$version" >> $GITHUB_ENV
+          # Set outputs for further steps
+          echo "tag_name=$tag_name" >> $GITHUB_ENV
+          echo "releases_created=$releases_created" >> $GITHUB_ENV
+          echo "version=$version" >> $GITHUB_ENV
 
-    - name: Checkout code
-      id: checkout_code
-      if: env.releases_created == 'true' && env.tag_name != ''
-      uses: actions/checkout@v2
+      - name: Checkout code
+        id: checkout_code
+        if: env.releases_created == 'true' && env.tag_name != ''
+        uses: actions/checkout@v2
 
-    - name: Set up Docker Buildx
-      if: env.releases_created == 'true' && env.tag_name != ''
-      uses: docker/setup-buildx-action@v1
+      - name: Set up Docker Buildx
+        if: env.releases_created == 'true' && env.tag_name != ''
+        uses: docker/setup-buildx-action@v1
 
-    - name: Log in to Docker Hub
-      if: env.releases_created == 'true' && env.tag_name != ''
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Log in to Docker Hub
+        if: env.releases_created == 'true' && env.tag_name != ''
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build and push Docker image
-      if: env.releases_created == 'true' && env.tag_name != ''
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: |
-          sapeled3/nj-releaseplease:${{ env.tag_name }}
-          sapeled3/nj-releaseplease:latest
+      - name: Build and push Docker image
+        if: env.releases_created == 'true' && env.tag_name != ''
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: |
+            sapeled3/nj-releaseplease:${{ env.tag_name }}
+            sapeled3/nj-releaseplease:latest
