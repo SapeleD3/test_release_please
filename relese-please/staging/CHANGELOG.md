@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.4](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.3...staging-v1.3.4) (2024-08-07)
+
+
+### Bug Fixes
+
+* use git hub token ([e5b5b75](https://github.com/SapeleD3/test_release_please/commit/e5b5b7559500a1ab939d0bf14d1642844d7bd80b))
+
 ## [1.3.3](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.2...staging-v1.3.3) (2024-08-06)
 
 
