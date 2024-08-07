@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.6](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.5...staging-v1.3.6) (2024-08-07)
+
+
+### Bug Fixes
+
+* use needs outputs ([2bfc42a](https://github.com/SapeleD3/test_release_please/commit/2bfc42ad42ae89e988d6e095bea86ca9b95abec4))
+* use tag name ([e780ecf](https://github.com/SapeleD3/test_release_please/commit/e780ecffe1dc1abfafd4ceb6b155e4f7cf31da9e))
+
 ## [1.3.5](https://github.com/SapeleD3/test_release_please/compare/staging-v1.3.4...staging-v1.3.5) (2024-08-07)
 
 
